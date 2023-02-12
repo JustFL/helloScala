@@ -13,6 +13,11 @@ object Variable {
     println(cat)
 
 
+    // Nothing是其他任意类型的子类 这里返回一个异常
+    def testNothing(): Nothing = {
+      throw new Exception()
+    }
+    println(testNothing)
 
   }
 }
