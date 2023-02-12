@@ -1,3 +1,5 @@
+import scala.util.control.Breaks
+
 object ProcessControl {
   def main(args: Array[String]): Unit = {
     // scala所有的操作都有返回值 {}是代码块 代码块中的最后一行就是返回值
@@ -24,6 +26,7 @@ object ProcessControl {
     val arr = for (x <- 1 to(5, 2))
       yield x * 2
 
+    println("-------------前闭后开的范围-------------")
     for (index <- 0 until arr.length)
       println(arr(index))
 
@@ -42,11 +45,20 @@ object ProcessControl {
       println("i=" + i + " j=" + j)
     }
 
-
     println("-------------倒序打印-------------")
     for (i <- 1 to 10 reverse) {
       println(i)
     }
+
+
+    println("-------------Scala中使用breakable控制结构来实现break和continue功能-------------")
+    Breaks.breakable(
+      for (elem <- 1 to 10) {
+        println(elem)
+        if (elem == 5) Breaks.break()
+      }
+    )
+    println("正常结束循环")
 
   }
 }
