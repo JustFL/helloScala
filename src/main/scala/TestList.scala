@@ -54,10 +54,10 @@ object TestList {
 
 
     // 删除数据
-    val lb2: ListBuffer[Int] = lb1.-(9)
-    lb2.-=(8)
-    lb2.remove(1)
-    println(lb2)
+    lb1.-=(1)
+    lb1.remove(1)
+    println(lb1)
+
 
   }
 }
