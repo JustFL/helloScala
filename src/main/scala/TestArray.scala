@@ -58,12 +58,12 @@ object TestArray {
 
     // 向数组最后追加数据
     arr4.append(5, 6)
-    arr4.foreach(println)
+    println(arr4)
 
     println("-------------------------")
     // 删除
     arr4.remove(3,1)
-    arr4.foreach(println)
+    println(arr4)
 
     // 向指定的位置插入数据
     arr4.insert(0, 7, 8)
@@ -72,7 +72,7 @@ object TestArray {
 
     // 修改元素
     arr4(1) = 9
-    arr4.foreach(println)
+    println(arr4)
 
 
     // .toArray 返回一个新的定长数组集合 原可变数组不变
