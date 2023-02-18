@@ -34,10 +34,6 @@ object FunctionAsParameter {
     // 如果参数只出现一次 则参数省略且后面参数可以用_代替
     f2( println(_) )
 
-
-    // 如果参数只出现一次 则参数省略且后面参数可以用_代替
-    f2( println(_) )
-
     //
     f2( println )
 
