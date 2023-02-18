@@ -1,6 +1,7 @@
 object Variable {
   def main(args: Array[String]): Unit = {
 
+    // 变量常量必须有初始值
     // Unit类型表示没有返回值 Unit只有一个实例值()
     def testUnit : Unit = {}
     println(testUnit)
