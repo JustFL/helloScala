@@ -6,10 +6,12 @@ object Operator {
     val s2 = new String("abc")
 
     println(s1 == s2)
+
+    // 比较引用地址
     println(s1.eq(s2))
 
 
-    // 在Scala中其实是没有运算符的 所有运算符都是方法
+    // 在Scala所有运算符都是方法
     // 标准的加法运算
     val i: Int = 1.+(1)
     // 当调用对象的方法时 .可以省略
