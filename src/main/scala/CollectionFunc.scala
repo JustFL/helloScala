@@ -1,3 +1,5 @@
+import scala.collection.mutable
+
 object CollectionFunc {
   def main(args: Array[String]): Unit = {
 
@@ -128,6 +130,19 @@ object CollectionFunc {
     val i4 = l1.foldRight(10)((x, y) => x - y)
     println(i4)
 
+    // 两个Map的数据合并
+    val map1 = mutable.Map("a" -> 1, "b" -> 2, "c" -> 3)
+    val map2 = mutable.Map("a" -> 4, "b" -> 5, "d" -> 6)
+
+    val map3: mutable.Map[String, Int] = map1.foldRight(map2)((tuple, map) => {
+      map(tuple._1) = map.getOrElse(tuple._1, 0) + tuple._2
+      map
+    })
+    println(map3)
+
+    println("----------------------")
+    val wordCountList = List("Hello Scala Hbase kafka", "Hello Scala Hbase", "Hello Scala", "Hello")
+    wordCountList.flatMap(_.split(" ")).groupBy(word => word).mapValues(list => list.length).toList.sortWith(_._2 > _._2).take(3).foreach(println)
   }
 
 }
