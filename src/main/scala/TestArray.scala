@@ -14,9 +14,6 @@ object TestArray {
     // 修改某个元素的值
     arr1(3) = 10
 
-    // 采用方法的形式给数组赋值
-    arr1.update(0, 1)
-
     // 遍历数组
     println(arr1.mkString(","))
 
@@ -49,26 +46,23 @@ object TestArray {
      */
     val arr4 = ArrayBuffer[Any](1, 2, 3)
 
-    println("arr4.hash=" + arr4.hashCode())
-
-    // 追加数据
-    arr4.+=(4)
-    arr4 += (4)
-    println(arr4.mkString(","))
-
     // 向数组最后追加数据
-    arr4.append(5, 6)
+    arr4.append(4, 5)
+    arr4.prepend(0)
     println(arr4)
 
     println("-------------------------")
-    // 删除
+    // 删除指定索引位置数据
     arr4.remove(3,1)
+    println(arr4)
+
+    // 指定数据删除
+    arr4 -= 4
     println(arr4)
 
     // 向指定的位置插入数据
     arr4.insert(0, 7, 8)
-    println(arr4.mkString(","))
-    println("arr4.hash=" + arr4.hashCode())
+    println(arr4)
 
     // 修改元素
     arr4(1) = 9

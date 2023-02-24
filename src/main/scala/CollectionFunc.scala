@@ -60,7 +60,7 @@ object CollectionFunc {
     println(list.zip(list1))
 
     // 滑窗
-    list.sliding(2, 5).foreach(println)
+    list.sliding(2, 1).foreach(println)
 
 
     println("---简单计算函数---")
