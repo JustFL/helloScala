@@ -32,5 +32,7 @@ object ParamImplicit {
     sayHi
     //sayHi()
 
+    // 注意如果同时有隐式值和默认值 隐式值会覆盖默认值
+
   }
 }
