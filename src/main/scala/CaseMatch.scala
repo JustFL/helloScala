@@ -36,7 +36,14 @@ object A {
   }
 }
 
-
-// 样例类 主构造器内的参数自动提升为属性 不需要加val或var 并且伴生对象 伴生对象中的apply和unapply方法都已自动生成
+/**
+ * 样例类
+ * 1、构造器中的参数如果不被声明为 var 的话，它默认的话是 val 类型的，但一般不推荐将构造器中的参数声明为 var
+ * 2、自动创建伴生对象，同时在里面给我们实现子 apply 方法，使得我们在使用的时候可以不直接显示地 new 对象
+ * 3、伴生对象中同样会帮我们实现 unapply 方法，从而可以将 case class 应用于模式匹配
+ * 4、实现自己的 toString、hashCode、copy、equals 方法
+ * 5、case class 主构造函数里面没有修饰符，默认的是 val
+ *
+ */
 case class B(name: String, age: Int)
 
