@@ -22,5 +22,15 @@ object ParamImplicit {
     import ParaImp._
     TicketHouse.buyTicket(new Older("chenhe"))
     TicketHouse.buyTicket(new Child("luhan"))
+
+
+    implicit val str: String = "alice"
+    def sayHello()(implicit name: String) = println("hello " + name)
+    def sayHi(implicit name: String) = println("hi " + name)
+    sayHello()
+    sayHello
+    sayHi
+    //sayHi()
+
   }
 }
