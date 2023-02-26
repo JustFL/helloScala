@@ -183,24 +183,22 @@ object MatchCase extends App {
     case Student(id, name, age) => println("this is a student " + id + name + age)
   }
 
-  /*偏函数原型*/
+  // 偏函数原型
   def func1(t: Int): String = {
     t match {
       case 1 => println("1"); "1"
       case 2 => println("2"); "2"
     }
   }
-
   func1(2)
-  /*偏函数*/
-  val flag = true
 
+  // 偏函数
   def func2: PartialFunction[Int, String] = {
     case 1 => "1"
     case 2 => "2"
   }
 
-  println("func2:" + func2(2))
+  println("func2:" + func2(1))
 }
 
 
